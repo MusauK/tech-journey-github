@@ -67,62 +67,88 @@
     <main class="bg-white/95 w-full max-w-2xl my-12 p-10 rounded-3xl shadow-2xl shadow-purple-900/20 border border-purple-200">
       <!-- ▼▼▼ START EDITING HERE ▼▼▼ -->
 
-      <h1 class="text-4xl font-extrabold text-purple-900">
-        Hi, I'm Musau <span class="inline-block">💜</span>
+      <h1 class="text-5xl font-extrabold text-purple-900">
+        Hello! I'm Musau <span class="inline-block">💜</span>
       </h1>
-      <p class="text-lg text-purple-700 mt-1">
-        I am going to be an 11th grader in the fall, and I am building a purple-themed page while learning Git, GitHub, and coding.
+      <p class="text-lg text-purple-700 mt-3 max-w-2xl">
+        I'm an aspiring 11th grader who loves purple, music, anime, and learning how to share ideas on the web with GitHub Pages.
       </p>
 
-      <h2 class="text-2xl font-semibold mt-8 pb-1 border-b-4 border-purple-500">
-        About Me
-      </h2>
-      <p class="mt-3 text-purple-800">
-        I am Musau, and I am going to be an 11th grader in the fall. I love the color purple and want my page to feel bright, creative, and fun.
-      </p>
-      <p class="mt-3 text-purple-800">
-        I am currently learning how to code and excited to share my journey with GitHub Pages.
-      </p>
+      <section class="mt-10 grid gap-5 md:grid-cols-2">
+        <article class="rounded-3xl border border-purple-200 bg-purple-50/90 p-6 shadow-xl shadow-purple-500/10">
+          <h2 class="text-2xl font-semibold text-purple-900">My Story</h2>
+          <p class="mt-3 text-purple-800 leading-7">
+            I enjoy building bright, creative things and exploring new skills. Right now, I’m practicing Git, writing HTML, and making this page feel exciting and personal.
+          </p>
+          <div class="mt-5 space-y-2 text-purple-700">
+            <p><i class="fa-solid fa-music text-purple-500 mr-2"></i>Orchestra fan</p>
+            <p><i class="fa-solid fa-book-open text-purple-500 mr-2"></i>Anime & reading fan</p>
+            <p><i class="fa-solid fa-code text-purple-500 mr-2"></i>Learning to code with real projects</p>
+          </div>
+        </article>
 
-      <h2 class="text-2xl font-semibold mt-8 pb-1 border-b-4 border-purple-400">
-        Things I'm Into
-      </h2>
-      <ul class="mt-3 space-y-1 text-purple-800 list-disc list-inside">
-        <li>Orchestra is one of my favorite activities.</li>
-        <li>I also enjoy reading, watching anime, and listening to K-pop.</li>
-        <li>I am currently learning how to code and love making this page look purple and personal.</li>
-      </ul>
+        <article class="rounded-3xl border border-purple-200 bg-white p-6 shadow-lg shadow-indigo-200/40">
+          <h2 class="text-2xl font-semibold text-purple-900">Showcase Highlights</h2>
+          <div class="mt-5 space-y-4">
+            <div class="rounded-2xl bg-gradient-to-r from-purple-500 to-fuchsia-500 p-4 text-white shadow-lg shadow-fuchsia-400/20">
+              <p class="text-sm uppercase tracking-[0.18em]">Fun fact</p>
+              <p class="mt-2 text-xl font-semibold">I love designing things with bright purple colors.</p>
+            </div>
+            <div class="rounded-2xl bg-purple-100 p-4 text-purple-900">
+              <p class="font-semibold">Goal</p>
+              <p class="mt-2 text-sm">Share my learning journey and make a page that feels lively and welcoming.</p>
+            </div>
+            <div class="rounded-2xl bg-white p-4 text-purple-900 border border-purple-200">
+              <p class="font-semibold">Today’s progress</p>
+              <p class="mt-2 text-sm">I updated my page with a fun layout, interactive button, and a polished section for my interests.</p>
+            </div>
+          </div>
+        </article>
+      </section>
 
-      <h2 class="text-2xl font-semibold mt-8 pb-1 border-b-4 border-purple-400">
-        What I'm Learning
-      </h2>
-      <p class="mt-3 text-gray-700">
-        Right now I'm learning how developers build and share software with
-        GitHub. This page is proof — I wrote it and published it myself!
-      </p>
+      <section class="mt-10">
+        <h2 class="text-2xl font-semibold pb-1 border-b-4 border-purple-500 text-purple-900">Projects & Passions</h2>
+        <div class="mt-5 grid gap-4 sm:grid-cols-2">
+          <div class="rounded-3xl bg-white p-5 shadow-lg shadow-purple-300/20 border border-purple-100">
+            <p class="text-xl font-semibold text-purple-900">Purple Design</p>
+            <p class="mt-3 text-purple-700">I love choosing colors that feel bold, bright, and joyful.</p>
+          </div>
+          <div class="rounded-3xl bg-white p-5 shadow-lg shadow-purple-300/20 border border-purple-100">
+            <p class="text-xl font-semibold text-purple-900">Music & Creativity</p>
+            <p class="mt-3 text-purple-700">Playing orchestra and enjoying pop music helps me think of new ideas.</p>
+          </div>
+          <div class="rounded-3xl bg-white p-5 shadow-lg shadow-purple-300/20 border border-purple-100">
+            <p class="text-xl font-semibold text-purple-900">Web learning</p>
+            <p class="mt-3 text-purple-700">I’m practicing HTML and GitHub to build pages that feel personal.</p>
+          </div>
+          <div class="rounded-3xl bg-white p-5 shadow-lg shadow-purple-300/20 border border-purple-100">
+            <p class="text-xl font-semibold text-purple-900">Anime & stories</p>
+            <p class="mt-3 text-purple-700">I get inspiration from stories, characters, and bright worlds.</p>
+          </div>
+        </div>
+      </section>
 
-      <!--
-        A little interactive button, powered by Alpine.js.
-        x-data gives this box a tiny bit of "memory" (waves),
-        @click runs code when clicked, and x-text shows a value.
-      -->
-      <div x-data="{ waves: 0 }" class="mt-8">
-        <button
-          @click="waves++"
-          class="bg-gradient-to-r from-purple-600 to-fuchsia-600 hover:from-purple-700 hover:to-fuchsia-700 text-white font-semibold px-5 py-2 rounded-full shadow-lg shadow-purple-500/30 transition"
-        >
-          <i class="fa-solid fa-hand"></i> Wave at me
-        </button>
-        <span x-show="waves > 0" class="ml-3 text-gray-600">
-          Thanks for the <span x-text="waves"></span> wave(s)! 👋
-        </span>
-      </div>
+      <section class="mt-10 rounded-3xl bg-gradient-to-r from-purple-600 to-fuchsia-600 p-6 text-white shadow-2xl shadow-purple-600/20">
+        <div class="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-center">
+          <div>
+            <p class="text-sm uppercase tracking-[0.2em] opacity-90">Interactive</p>
+            <p class="mt-2 text-2xl font-semibold">Try this button!</p>
+            <p class="mt-2 text-purple-100/90">Click to send a little wave, and you'll see the page respond instantly.</p>
+          </div>
+          <div x-data="{ waves: 0 }" class="flex items-center gap-3">
+            <button
+              @click="waves++"
+              class="rounded-full bg-white px-5 py-3 text-purple-700 font-semibold shadow-lg shadow-white/20 transition hover:scale-105"
+            >
+              <i class="fa-solid fa-hand-wave"></i> Wave
+            </button>
+            <span x-text="waves === 0 ? 'No waves yet' : waves + ' wave(s) sent!'" class="font-semibold"></span>
+          </div>
+        </div>
+      </section>
 
-      <!-- ▲▲▲ STOP EDITING HERE (or keep going — it's your page!) ▲▲▲ -->
-
-      <footer class="mt-10 text-center text-sm text-gray-400">
-        Built with <i class="fa-solid fa-heart text-purple-400"></i> during the
-        Tech Journey course.
+      <footer class="mt-10 text-center text-sm text-purple-100/90">
+        Built with <i class="fa-solid fa-heart text-pink-200"></i> in the Tech Journey course.
       </footer>
     </main>
   </body>
